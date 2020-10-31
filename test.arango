@@ -1,0 +1,12 @@
+//just like normal js just cannot interface into the server itself
+db._create('test'); //creates collection
+db._collections(); //prints all collection in server
+db.<name of collection>; //access to collection
+db._collection('test'); //alternate to above
+db.<name of collection>.save(_key:"foo", city: "foo-city"); //create entry in collection
+db.<name of collection>.count(); //counts all entries in collection
+db.<name of collection>.document("foo"); //prints the attributes of specified document key
+db._document("test/foo"); //displays the same as saying db.<name>.document("document")
+db._update("test/foo", {zipcode: 39535}); //Update entry
+db._remove("test/example7"); //deletes document by name under collection hierarchy
+db.<name of collection>.remove("example8"); //alternate way of above
